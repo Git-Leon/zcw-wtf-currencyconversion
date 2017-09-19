@@ -5,6 +5,6 @@ package currencies;
  */
 public class Ringgit extends ForeignCurrency {
     public Ringgit(double amount) {
-        super(4.47, amount);
+        super(CurrencyType.RINGGIT, amount);
     }
 }

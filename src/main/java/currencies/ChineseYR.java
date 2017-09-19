@@ -5,6 +5,6 @@ package currencies;
  */
 public class ChineseYR extends ForeignCurrency {
     public ChineseYR(double amount) {
-        super(6.92, amount);
+        super(CurrencyType.CHINESE_YR, amount);
     }
 }

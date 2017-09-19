@@ -5,6 +5,6 @@ package currencies;
  */
 public class AustralianDollar extends ForeignCurrency {
     public AustralianDollar(double amount) {
-        super(1.35, amount);
+        super(CurrencyType.AUSTRALIAN, amount);
     }
 }

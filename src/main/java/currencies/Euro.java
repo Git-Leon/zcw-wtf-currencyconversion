@@ -5,6 +5,6 @@ package currencies;
  */
 public class Euro extends ForeignCurrency {
     public Euro(double amount) {
-        super(.94, amount);
+        super(CurrencyType.EURO, amount);
     }
 }

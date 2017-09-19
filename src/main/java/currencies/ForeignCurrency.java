@@ -11,6 +11,12 @@ public class ForeignCurrency extends Currency {
         this.usd = new USDollar(toUSDollar());
     }
 
+
+    public ForeignCurrency(CurrencyType currencyType, double amount) {
+        // Adapter pattern
+        this(currencyType.getValue(), amount);
+    }
+
     public double toAustralianDollar() {
         return usd.toAustralianDollar();
     }

@@ -5,6 +5,6 @@ package currencies;
  */
 public class Pound extends ForeignCurrency {
     public Pound(double amount) {
-        super(.82, amount);
+        super(CurrencyType.POUND, amount);
     }
 }

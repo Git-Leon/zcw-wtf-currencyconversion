@@ -13,7 +13,6 @@ public class Utilities {
         System.out.println(prompt);
         Scanner scanner = new Scanner(System.in);
         String out = scanner.nextLine();
-        scanner.close();
         return out;
     }
 }

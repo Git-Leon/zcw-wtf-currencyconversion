@@ -5,6 +5,6 @@ package currencies;
  */
 public class SingaporeDollar extends ForeignCurrency {
     public SingaporeDollar(double amount) {
-        super(1.43, amount);
+        super(CurrencyType.SINGAPORE, amount);
     }
 }

@@ -5,6 +5,6 @@ package currencies;
  */
 public class CanadianDollar extends ForeignCurrency {
     public CanadianDollar(double amount) {
-        super(1.32, amount);
+        super(CurrencyType.CANADIAN, amount);
     }
 }
