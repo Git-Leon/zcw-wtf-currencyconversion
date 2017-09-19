@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {        
-        Utilities utils = new Utilities();
+        Console console = new Console();
         Engine engine = new Engine();
         System.out.println("Welcome to my currency conversion");
 
-        double fromAmount = utils.getDoubleInput("How much moneys?");
-        String fromType = utils.getStringInput("What type of currency are we converting from");
-        String toType = utils.getStringInput("What type of currency are we converting to");
+        double fromAmount = console.getDoubleInput("How much moneys?");
+        String fromType = console.getStringInput("What type of currency are we converting from");
+        String toType = console.getStringInput("What type of currency are we converting to");
         double toAmount = engine.run(fromAmount, fromType, toType);
 
         System.out.format("Converted from [ %s ] to [ %s ]", fromType, toType);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class Utilities {
-    public Utilities() {
+public class Console {
+    public Console() {
     }
 
     public double getDoubleInput(String prompt) {
