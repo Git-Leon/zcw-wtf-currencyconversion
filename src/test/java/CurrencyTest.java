@@ -1,11 +1,18 @@
+import currencies.CurrencyType;
 import org.junit.After;
 import org.junit.Before;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by leon.hunter on 1/17/2017.
  */
 public abstract class CurrencyTest {
-    protected final Engine engine = new Engine();
+    protected final Engine engine = Engine.INSTANCE;
+    private final CurrencyType currencyType;
+    public CurrencyTest(CurrencyType currencyType) {
+        this.currencyType = currencyType;
+    }
 
     public abstract void toAustralianDollar();
 
@@ -29,7 +36,15 @@ public abstract class CurrencyTest {
 
     public abstract void toYen();
 
-    protected abstract void engineTest(String toType, double fromAmount, double expectedValue);
+    @Deprecated // TODO - get rid of this shit
+    public final void engineTest(String toType, double fromAmount, double expectedValue) {
+
+    }
+
+    public final void engineTest(CurrencyType toType, double fromAmount, double expectedValue) {
+        double toAmount = engine.run(fromAmount, currencyType, toType);
+        assertEquals(toAmount, expectedValue, 0);
+    }
 
     @Before
     public void setUp() {
