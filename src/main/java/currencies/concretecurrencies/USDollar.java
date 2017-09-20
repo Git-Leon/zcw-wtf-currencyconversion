@@ -54,6 +54,6 @@ public class USDollar extends Currency {
     }
 
     public double convert(CurrencyType currencyType) {
-        return (this.amount * currencyType.getValue()) / this.rate;
+        return (this.amount * currencyType.getExchangeRate()) / this.rate;
     }
 }

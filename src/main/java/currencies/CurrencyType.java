@@ -15,13 +15,15 @@ public enum CurrencyType {
     SINGAPORE(1.43),
     US(1.0),
     YEN(115.84);
-    private final double value;
 
-    CurrencyType(double value) {
-        this.value = value;
+    // The exchange rate with respect to a US dollar
+    private final double exchangeRate;
+
+    CurrencyType(double exchangeRate) {
+        this.exchangeRate = exchangeRate;
     }
 
-    public double getValue() {
-        return value;
+    public double getExchangeRate() {
+        return exchangeRate;
     }
 }

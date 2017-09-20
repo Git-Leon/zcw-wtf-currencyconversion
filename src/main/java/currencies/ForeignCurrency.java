@@ -9,7 +9,7 @@ public class ForeignCurrency extends Currency {
     private USDollar usd;
 
     public ForeignCurrency(CurrencyType currencyType, double amount) {
-        super(currencyType.getValue(), amount);
+        super(currencyType.getExchangeRate(), amount);
         this.usd = new USDollar(this.toUSDollar());
     }
 
