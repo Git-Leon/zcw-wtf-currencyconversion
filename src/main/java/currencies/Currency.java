@@ -30,4 +30,60 @@ public abstract class Currency {
     public abstract double toSingaporeDollar();
 
     public abstract double toYen();
+
+
+
+    public double to(CurrencyType toType) {
+        double convertedAmount;
+        switch (toType) {
+            case AUSTRALIAN:
+                convertedAmount = toAustralianDollar();
+                break;
+
+            case CANADIAN:
+                convertedAmount = toCanadianDollar();
+                break;
+
+            case CHINESE_YR:
+                convertedAmount = toChineseYR();
+                break;
+
+            case EURO:
+                convertedAmount = toEuro();
+                break;
+
+            case FRANC:
+                convertedAmount = toFranc();
+                break;
+
+            case POUND:
+                convertedAmount = toPounds();
+                break;
+
+            case RINGGIT:
+                convertedAmount = toRinggit();
+                break;
+
+            case RUPEE:
+                convertedAmount = toRupee();
+                break;
+
+            case SINGAPORE:
+                convertedAmount = toSingaporeDollar();
+                break;
+
+            case US:
+                convertedAmount = toUSDollar();
+                break;
+
+            case YEN:
+                convertedAmount = toYen();
+                break;
+
+            default:
+                String errorMessage = String.format("Unaccounted for enumeration [ %s ]", toType.name());
+                throw new IllegalArgumentException(errorMessage);
+        }
+        return convertedAmount;
+    }
 }

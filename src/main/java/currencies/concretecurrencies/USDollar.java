@@ -1,4 +1,7 @@
-package currencies;
+package currencies.concretecurrencies;
+
+import currencies.Currency;
+import currencies.CurrencyType;
 
 public class USDollar extends Currency {
 

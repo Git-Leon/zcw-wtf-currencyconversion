@@ -1,20 +1,16 @@
 package currencies;
 
+import currencies.concretecurrencies.USDollar;
+
 /**
  * Created by leon.hunter on 1/17/2017.
  */
 public class ForeignCurrency extends Currency {
     private USDollar usd;
 
-    public ForeignCurrency(double rate, double amount) {
-        super(rate, amount);
-        this.usd = new USDollar(toUSDollar());
-    }
-
-
     public ForeignCurrency(CurrencyType currencyType, double amount) {
-        // Adapter pattern
-        this(currencyType.getValue(), amount);
+        super(currencyType.getValue(), amount);
+        this.usd = new USDollar(this.toUSDollar());
     }
 
     public double toAustralianDollar() {

@@ -1,4 +1,7 @@
-package currencies;
+package currencies.concretecurrencies;
+
+import currencies.CurrencyType;
+import currencies.ForeignCurrency;
 
 /**
  * Created by leon.hunter on 1/17/2017.
