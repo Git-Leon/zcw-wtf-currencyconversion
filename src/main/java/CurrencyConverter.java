@@ -2,7 +2,7 @@ import currencies.*;
 
 /**
  * Created by Chris on 9/19/2017.
- */
+ */ // Factory Creator
 public class CurrencyConverter {
     private final CurrencyFactory factory;
 

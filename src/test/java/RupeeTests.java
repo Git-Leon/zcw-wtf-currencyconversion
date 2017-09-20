@@ -1,69 +1,67 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static currencies.CurrencyType.*;
 
 /**
  * Created by latashawatson on 1/16/17.
  */
 public class RupeeTests extends CurrencyTest {
+    public RupeeTests() {
+        super(RUPEE);
+    }
 
     @Test
     public void toAustralianDollar() {
-        engineTest("australian",136.64, 2.7);
+        engineTest(AUSTRALIAN,136.64, 2.7);
     }
 
     @Test
     public void toCanadianDollar() {
-        engineTest("canadian",136.64, 2.64);
+        engineTest(CANADIAN,136.64, 2.64);
     }
 
     @Test
     public void toChineseYR() {
-        engineTest("chineseyr",136.64, 13.84);
+        engineTest(CHINESE_YR,136.64, 13.84);
     }
 
     @Test
     public void toEuro() {
-        engineTest("euro",136.64, 1.88);
+        engineTest(EURO,136.64, 1.88);
     }
 
     @Test
     public void toFranc() {
-        engineTest("franc",136.64, 2.02);
+        engineTest(FRANC,136.64, 2.02);
     }
 
     @Test
     public void toPound() {
-        engineTest("pound",136.64, 1.64);
+        engineTest(POUND,136.64, 1.64);
     }
 
     @Test
     public void toRinggit() {
-        engineTest("ringgit",136.64, 8.94);
+        engineTest(RINGGIT,136.64, 8.94);
     }
 
     @Test
     public void toRupee() {
-        engineTest("rupee", 136.64, 136.64);
+        engineTest(RUPEE, 136.64, 136.64);
     }
 
     @Test
     public void toUSDollar() {
-        engineTest("us",136.64, 2);
+        engineTest(US,136.64, 2);
     }
 
     @Test
     public void toSingaporeDollar() {
-        engineTest("singapore",136.64, 2.86);
+        engineTest(SINGAPORE,136.64, 2.86);
     }
 
     @Test
     public void toYen() {
-        engineTest("yen",136.64, 231.68);
-    }
-
-    public void engineTest(String toRate, double amount, double expectedValue) {
-        double toAmount = super.engine.run(amount, "rupee", toRate);
-        assertEquals(expectedValue, toAmount, 0);
+        engineTest(YEN,136.64, 231.68);
     }
 }
